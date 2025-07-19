@@ -1,0 +1,97 @@
+    # path('password_reset/',auth_views.PasswordResetView.as_view(),name='password_reset'),
+    # path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(),name='password_reset_done'),
+    # path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(),name='password_reset_confirm'),
+    # path('reset/done',auth_views.PasswordResetCompleteView.as_view(),name='password_reset_complete'),
+
+from unicodedata import name
+from django.urls import path
+from . import views
+from django.contrib.auth import views as auth_views
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+conda create -n env python==3.10.12
+conda actiavte env
+python -m pip install pillow==9.4.0
+pip install scikit-learn==1.2.2
+pip install django==5.0.3
+pip install pytz==2023.4
+pip install python-dateutil==2.8.2
+pip install protobuf==3.20.3
+pip install wrapt==1.14.1
+pip install termcolor==2.4.0
+pip install flatbuffers==24.3.7
+pip install tensorflow==2.15.0
+pip install matplotlib==3.7.1
+pip install seaborn==0.13.1
+pip install BeautifulSoup4==4.12.3
+pip install pyserial
+pip install torch==2.2.1
+pip install scikit-image==0.19.3
+pip install torchvision==0.17.1
+pip install opencv-python
+pip install joblib
+
+
+
+
+It seems like you have a dataset containing various metrics such as timestamp, device information, and different parameters like RSRP, RSRQ, RSSI, SNR, etc. along with their respective counts and ranges. With this dataset, you could embark on a project to analyze and visualize network performance metrics in a telecommunications or networking context.
+
+Here's a suggested project outline:
+
+**Project Title:** Network Performance Analysis and Visualization
+
+**Objective:** To analyze and visualize network performance metrics to identify trends, anomalies, and areas for optimization.
+
+**Project Steps:**
+
+1. **Data Preprocessing:**
+   - Load the dataset into a suitable data structure (e.g., DataFrame in Python if using libraries like Pandas).
+   - Check for missing values, outliers, and inconsistencies in the data.
+   - Convert timestamp data into a more interpretable format if necessary.
+
+2. **Exploratory Data Analysis (EDA):**
+   - Explore the distribution of each metric using histograms, box plots, or density plots.
+   - Examine correlations between different metrics using scatter plots or correlation matrices.
+   - Analyze the distribution of metrics over time to identify any temporal patterns or anomalies.
+
+3. **Network Performance Metrics Analysis:**
+   - Calculate summary statistics (mean, median, standard deviation, etc.) for each metric.
+   - Compare metrics across different devices or time periods to identify variations.
+   - Conduct hypothesis testing to determine significant differences in metrics under different conditions.
+
+4. **Visualization:**
+   - Create visualizations such as line plots, bar charts, and heatmaps to represent the trends and distributions of network performance metrics.
+   - Use interactive visualization tools (e.g., Plotly, Bokeh) to allow for exploration and drill-down capabilities.
+   - Develop a dashboard to present key insights and metrics in a user-friendly manner.
+
+5. **Anomaly Detection:**
+   - Implement anomaly detection algorithms (e.g., Isolation Forest, One-Class SVM) to identify unusual patterns or outliers in the data.
+   - Visualize detected anomalies and investigate potential causes or implications.
+
+6. **Predictive Modeling (Optional):**
+   - If applicable, build predictive models to forecast future network performance based on historical data.
+   - Evaluate model performance using appropriate metrics (e.g., RMSE for regression, accuracy for classification).
+
+7. **Insights and Recommendations:**
+   - Summarize key findings from the analysis and visualization.
+   - Provide actionable recommendations for optimizing network performance based on identified trends and insights.
+
+8. **Documentation and Presentation:**
+   - Document the entire project including data preprocessing steps, analysis techniques, and modeling approaches.
+   - Prepare a presentation or report summarizing the project findings, methodology, and recommendations.
+
+By completing this project, you'll gain valuable insights into network performance and potentially contribute to improving the efficiency and reliability of telecommunications systems.
+
+
+cd path\to\your\database
+sqlite3 your_database_name.db
+.tables
+.exit
